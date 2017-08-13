@@ -1,0 +1,46 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <servlet-name>JCloudServlet</servlet-name>
+
+    <servlet-class>JCloudServlet</servlet-class>
+  </servlet>
+  <servlet>
+
+    <display-name>RegisterUser</display-name>
+    <servlet-name>RegisterUser</servlet-name>
+    <servlet-class>RegisterUser</servlet-class>
+  </servlet>
+  <servlet>
+
+    <servlet-name>Authenticate</servlet-name>
+    <servlet-class>Authenticate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>JCloudServlet</servlet-name>
+    <url-pattern>/upload</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterUser</servlet-name>
+    <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Authenticate</servlet-name>
+    <url-pattern>/authenticate</url-pattern>
+  </servlet-mapping>
+
+
+  <session-config>
+    <session-timeout>
+      30
+    </session-timeout>
+  </session-config>
+
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
